@@ -1,6 +1,28 @@
-# README-driven Development
+# Claude Code Plugins Marketplace
 
-This is a template for a README-driven development project. It is intended to be used as a starting point for a new project and to be modified as needed.
+A personal, public collection of Claude Code plugins for cross-project sharing and management.
 
-- [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-- [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+## Contents
+
+- **Skills** - Custom slash commands and workflows
+- **Slash Commands** - Quick actions and shortcuts
+- **Hooks** - Event-driven automation scripts
+- **MCP Servers** - Model Context Protocol integrations
+
+## Usage
+
+Reference these plugins in your project's `.claude/settings.json` or global Claude Code configuration.
+
+## Structure
+
+```
+.
+├── skills/          # Custom skills definitions
+├── commands/        # Slash command implementations
+├── hooks/           # Hook scripts
+└── mcp/             # MCP server configurations
+```
+
+## License
+
+MIT
