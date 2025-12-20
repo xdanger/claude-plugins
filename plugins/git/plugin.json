@@ -1,6 +1,6 @@
 {
-  "name": "git-commit",
-  "description": "Slash command for Gitmoji + Conventional Commits.",
+  "name": "git",
+  "description": "Git slash commands (Gitmoji + Conventional Commits).",
   "version": "0.1.0",
   "author": {
     "name": "xdanger",

@@ -4,11 +4,23 @@ A personal, public collection of Claude Code plugins for cross-project sharing a
 
 ## Available Plugins
 
-| Plugin                             | Description                                                   | Type    |
-| ---------------------------------- | ------------------------------------------------------------- | ------- |
-| [notion](./plugins/notion)         | Notion MCP server using STDIO mode (workaround for OAuth bug) | MCP     |
-| [github](./plugins/github)         | GitHub MCP server via GitHub Copilot API                      | MCP     |
-| [git-commit](./plugins/git-commit) | Slash command for Gitmoji + Conventional Commits              | Command |
+| Plugin                     | Description                                                   | Type    |
+| -------------------------- | ------------------------------------------------------------- | ------- |
+| [notion](./plugins/notion) | Notion MCP server using STDIO mode (workaround for OAuth bug) | MCP     |
+| [github](./plugins/github) | GitHub MCP server via GitHub Copilot API                      | MCP     |
+| [git](./plugins/git)       | Git slash commands (Gitmoji + Conventional Commits)           | Command |
+
+## Installation
+
+```bash
+# Add this marketplace
+/plugin marketplace add xdanger/claude-plugins
+
+# Install individual plugins
+/plugin install notion@xdanger-claude-marketplace
+/plugin install github@xdanger-claude-marketplace
+/plugin install git@xdanger-claude-marketplace
+```
 
 ## Structure
 
@@ -21,33 +33,15 @@ A personal, public collection of Claude Code plugins for cross-project sharing a
     │   ├── .mcp.json       # MCP server config
     │   ├── plugin.json     # Plugin metadata
     │   └── README.md
-    ├── git-commit/
+    ├── git/
     │   ├── commands/
-    │   │   └── git-commit.md   # Slash command
+    │   │   └── commit.md   # /git:commit
     │   ├── plugin.json
     │   └── README.md
     └── notion/
         ├── .mcp.json
         ├── plugin.json
         └── README.md
-```
-
-## Usage
-
-### MCP Plugins
-
-Copy the `.mcp.json` content to your project's `.mcp.json` or global `~/.claude/.mcp.json`.
-
-### Slash Commands
-
-Symlink to your commands directory:
-
-```bash
-# User-level (all projects)
-ln -s /path/to/claude-plugins/plugins/git-commit/commands/git-commit.md ~/.claude/commands/
-
-# Project-level
-ln -s /path/to/claude-plugins/plugins/git-commit/commands/git-commit.md .claude/commands/
 ```
 
 ## Environment Variables

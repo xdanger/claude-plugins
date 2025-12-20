@@ -18,9 +18,9 @@
       "source": "./plugins/github"
     },
     {
-      "name": "git-commit",
-      "description": "Slash command for Gitmoji + Conventional Commits.",
-      "source": "./plugins/git-commit"
+      "name": "git",
+      "description": "Git slash commands (Gitmoji + Conventional Commits).",
+      "source": "./plugins/git"
     }
   ]
 }
