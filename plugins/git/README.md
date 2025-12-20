@@ -9,7 +9,7 @@ Git slash commands for Gitmoji + Conventional Commits workflow and GitHub Issue 
 /plugin marketplace add xdanger/claude-plugins
 
 # Install plugin
-/plugin install git@xdanger-claude-marketplace
+/plugin install git@xdanger-plugins
 ```
 
 ## Commands

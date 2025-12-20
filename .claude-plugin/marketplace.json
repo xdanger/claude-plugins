@@ -1,26 +1,26 @@
 {
-  "name": "xdanger-claude-marketplace",
   "description": "xdanger's Claude Plugins Marketplace",
-  "version": "0.1.0",
+  "name": "xdanger-plugins",
   "owner": {
     "name": "xdanger",
     "url": "https://github.com/xdanger"
   },
   "plugins": [
     {
-      "name": "notion",
       "description": "Notion MCP server using STDIO mode (workaround for OAuth bug).",
+      "name": "notion",
       "source": "./plugins/notion"
     },
     {
-      "name": "github",
       "description": "GitHub MCP server via GitHub Copilot API.",
+      "name": "github",
       "source": "./plugins/github"
     },
     {
-      "name": "git",
       "description": "Git slash commands (Gitmoji + Conventional Commits).",
+      "name": "git",
       "source": "./plugins/git"
     }
-  ]
+  ],
+  "version": "0.1.0"
 }

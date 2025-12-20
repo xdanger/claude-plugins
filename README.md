@@ -17,9 +17,9 @@ A personal, public collection of Claude Code plugins for cross-project sharing a
 /plugin marketplace add xdanger/claude-plugins
 
 # Install individual plugins
-/plugin install notion@xdanger-claude-marketplace
-/plugin install github@xdanger-claude-marketplace
-/plugin install git@xdanger-claude-marketplace
+/plugin install notion@xdanger-plugins
+/plugin install github@xdanger-plugins
+/plugin install git@xdanger-plugins
 ```
 
 ## Structure
