@@ -1,0 +1,12 @@
+{
+  "name": "github",
+  "description": "GitHub MCP server via GitHub Copilot API (HTTP mode).",
+  "version": "0.1.0",
+  "author": {
+    "name": "xdanger",
+    "url": "https://github.com/xdanger"
+  },
+  "repository": "https://github.com/xdanger/claude-plugins",
+  "license": "MIT",
+  "env": ["GITHUB_PAT"]
+}

@@ -1,0 +1,21 @@
+{
+  "name": "xdanger-claude-marketplace",
+  "description": "xdanger's Claude Plugins Marketplace",
+  "version": "0.1.0",
+  "owner": {
+    "name": "xdanger",
+    "url": "https://github.com/xdanger"
+  },
+  "plugins": [
+    {
+      "name": "notion",
+      "description": "Notion MCP server using STDIO mode (workaround for OAuth bug).",
+      "source": "./plugins/notion"
+    },
+    {
+      "name": "github",
+      "description": "GitHub MCP server via GitHub Copilot API.",
+      "source": "./plugins/github"
+    }
+  ]
+}
