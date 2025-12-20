@@ -1,6 +1,6 @@
 # Git Commands
 
-Git slash commands for Gitmoji + Conventional Commits workflow.
+Git slash commands for Gitmoji + Conventional Commits workflow and GitHub Issue lifecycle management.
 
 ## Installation
 
@@ -14,35 +14,38 @@ Git slash commands for Gitmoji + Conventional Commits workflow.
 
 ## Commands
 
-| Command       | Description                                                 |
-| ------------- | ----------------------------------------------------------- |
-| `/git:commit` | Generate commit message with Gitmoji + Conventional Commits |
+| Command                 | Description                                              |
+| ----------------------- | -------------------------------------------------------- |
+| `/git:commit`           | Generate commit message (Gitmoji + Conventional Commits) |
+| `/git:issue-create`     | Create a new GitHub Issue                                |
+| `/git:issue-plan`       | Explore solution for an issue                            |
+| `/git:issue-test`       | Generate tests for an issue                              |
+| `/git:issue-review`     | Code review for an issue                                 |
+| `/git:issue-commit`     | Commit with issue reference                              |
+| `/git:squash-and-merge` | Squash and merge a PR                                    |
 
 ## Usage
 
+```bash
+# Simple commit
+/git:commit
+
+# Issue workflow
+/git:issue-create <description>
+/git:issue-plan <issue_number>
+/git:issue-test <issue_number>
+/git:issue-review <issue_number>
+/git:issue-commit <issue_number>
+
+# PR merge
+/git:squash-and-merge <pr_number>
 ```
-/git:commit [issue_number]
-```
 
-## Features
+## Issue Lifecycle
 
-- Analyzes staged changes via `git diff --cached`
-- Fetches issue details if issue number provided
-- Generates commit message with:
-  - Gitmoji prefix
-  - Conventional Commits format (`type(scope): description`)
-  - Breaking change notation
-  - Issue reference
-
-## Example Output
-
-```
-✨ feat(auth)!: support user login (#1234)
-
-- ✨ add POST /v1/login endpoint
-- ✨ introduce jwt for tokens
-- ✅ add login tests
-
-💥 BREAKING CHANGE:
-- rename `AuthError` to `LoginError`
-```
+1. **Create Issue** → `/git:issue-create`
+2. **Plan Solution** → `/git:issue-plan`
+3. **Generate Tests** → `/git:issue-test`
+4. **Implement & Commit** → `/git:issue-commit`
+5. **Code Review** → `/git:issue-review`
+6. **Merge PR** → `/git:squash-and-merge`
