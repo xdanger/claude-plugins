@@ -4,10 +4,11 @@ A personal, public collection of Claude Code plugins for cross-project sharing a
 
 ## Available Plugins
 
-| Plugin                     | Description                                                   | Type |
-| -------------------------- | ------------------------------------------------------------- | ---- |
-| [notion](./plugins/notion) | Notion MCP server using STDIO mode (workaround for OAuth bug) | MCP  |
-| [github](./plugins/github) | GitHub MCP server via GitHub Copilot API                      | MCP  |
+| Plugin                             | Description                                                   | Type    |
+| ---------------------------------- | ------------------------------------------------------------- | ------- |
+| [notion](./plugins/notion)         | Notion MCP server using STDIO mode (workaround for OAuth bug) | MCP     |
+| [github](./plugins/github)         | GitHub MCP server via GitHub Copilot API                      | MCP     |
+| [git-commit](./plugins/git-commit) | Slash command for Gitmoji + Conventional Commits              | Command |
 
 ## Structure
 
@@ -20,6 +21,11 @@ A personal, public collection of Claude Code plugins for cross-project sharing a
     │   ├── .mcp.json       # MCP server config
     │   ├── plugin.json     # Plugin metadata
     │   └── README.md
+    ├── git-commit/
+    │   ├── commands/
+    │   │   └── git-commit.md   # Slash command
+    │   ├── plugin.json
+    │   └── README.md
     └── notion/
         ├── .mcp.json
         ├── plugin.json
@@ -28,19 +34,25 @@ A personal, public collection of Claude Code plugins for cross-project sharing a
 
 ## Usage
 
-### Option 1: Copy MCP config
+### MCP Plugins
 
 Copy the `.mcp.json` content to your project's `.mcp.json` or global `~/.claude/.mcp.json`.
 
-### Option 2: Reference via symlink
+### Slash Commands
+
+Symlink to your commands directory:
 
 ```bash
-ln -s /path/to/claude-plugins/plugins/notion/.mcp.json ~/.claude/mcp/notion.json
+# User-level (all projects)
+ln -s /path/to/claude-plugins/plugins/git-commit/commands/git-commit.md ~/.claude/commands/
+
+# Project-level
+ln -s /path/to/claude-plugins/plugins/git-commit/commands/git-commit.md .claude/commands/
 ```
 
 ## Environment Variables
 
-Each plugin requires specific environment variables. See individual plugin READMEs for details:
+MCP plugins require specific environment variables. See individual plugin READMEs:
 
 - **notion**: `NOTION_TOKEN`
 - **github**: `GITHUB_PAT`

@@ -16,6 +16,11 @@
       "name": "github",
       "description": "GitHub MCP server via GitHub Copilot API.",
       "source": "./plugins/github"
+    },
+    {
+      "name": "git-commit",
+      "description": "Slash command for Gitmoji + Conventional Commits.",
+      "source": "./plugins/git-commit"
     }
   ]
 }

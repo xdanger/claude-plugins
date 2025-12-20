@@ -1,0 +1,12 @@
+{
+  "name": "git-commit",
+  "description": "Slash command for Gitmoji + Conventional Commits.",
+  "version": "0.1.0",
+  "author": {
+    "name": "xdanger",
+    "url": "https://github.com/xdanger"
+  },
+  "repository": "https://github.com/xdanger/claude-plugins",
+  "license": "MIT",
+  "type": "command"
+}
