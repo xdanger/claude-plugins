@@ -7,6 +7,5 @@
     "url": "https://github.com/xdanger"
   },
   "repository": "https://github.com/xdanger/claude-plugins",
-  "license": "MIT",
-  "type": "command"
+  "license": "MIT"
 }
