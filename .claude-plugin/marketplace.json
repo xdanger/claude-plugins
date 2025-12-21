@@ -20,6 +20,11 @@
       "description": "Git slash commands (Gitmoji + Conventional Commits).",
       "name": "git",
       "source": "./plugins/git"
+    },
+    {
+      "description": "Convert PDF/EPUB/PPTX/DOCX/XLSX to Markdown using marker-pdf with LLM enhancement.",
+      "name": "marker",
+      "source": "./plugins/marker"
     }
   ],
   "version": "0.1.0"
