@@ -27,8 +27,11 @@ marker_single "<file_path>" \
   --use_llm \
   --llm_service=marker.services.claude.ClaudeService \
   --claude_model_name=claude-haiku-4-5 \
-  --claude_api_key=$ANTHROPIC_API_KEY
+  --claude_api_key=$ANTHROPIC_API_KEY \
+  --disable_image_extraction
 ```
+
+**Note**: `--disable_image_extraction` generates plain text output. Remove this flag if images need to be preserved.
 
 ## Parameters
 
@@ -49,7 +52,8 @@ marker_single "./docs/report.pdf" \
   --use_llm \
   --llm_service=marker.services.claude.ClaudeService \
   --claude_model_name=claude-haiku-4-5 \
-  --claude_api_key=$ANTHROPIC_API_KEY
+  --claude_api_key=$ANTHROPIC_API_KEY \
+  --disable_image_extraction
 ```
 
 ### Convert PPTX to HTML
@@ -61,7 +65,8 @@ marker_single "./slides/presentation.pptx" \
   --use_llm \
   --llm_service=marker.services.claude.ClaudeService \
   --claude_model_name=claude-haiku-4-5 \
-  --claude_api_key=$ANTHROPIC_API_KEY
+  --claude_api_key=$ANTHROPIC_API_KEY \
+  --disable_image_extraction
 ```
 
 ### Convert specific pages
@@ -74,7 +79,8 @@ marker_single "./docs/book.pdf" \
   --use_llm \
   --llm_service=marker.services.claude.ClaudeService \
   --claude_model_name=claude-haiku-4-5 \
-  --claude_api_key=$ANTHROPIC_API_KEY
+  --claude_api_key=$ANTHROPIC_API_KEY \
+  --disable_image_extraction
 ```
 
 ## Advanced Options
