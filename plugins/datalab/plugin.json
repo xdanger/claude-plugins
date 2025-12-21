@@ -1,0 +1,11 @@
+{
+  "name": "datalab",
+  "description": "Convert documents to Markdown using Datalab API with cloud-based processing.",
+  "version": "0.1.0",
+  "author": {
+    "name": "xdanger",
+    "url": "https://github.com/xdanger"
+  },
+  "repository": "https://github.com/xdanger/claude-plugins",
+  "license": "MIT"
+}

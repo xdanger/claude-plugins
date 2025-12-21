@@ -25,6 +25,11 @@
       "description": "Convert PDF/EPUB/PPTX/DOCX/XLSX to Markdown using marker-pdf with LLM enhancement.",
       "name": "marker",
       "source": "./plugins/marker"
+    },
+    {
+      "description": "Convert documents to Markdown using Datalab cloud API.",
+      "name": "datalab",
+      "source": "./plugins/datalab"
     }
   ],
   "version": "0.1.0"
