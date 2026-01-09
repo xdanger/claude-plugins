@@ -40,14 +40,13 @@ fileTypes:
 spellcheck:
   # Correct Words (Case insensitive) for by Spellcheck
   words:
-    - GitHub
-    - App Store
-    # This means "appstore" into "App Store"
-    - AppStore = App Store
-    - Git
-    - Node.js
-    - nodejs = Node.js
-    - VIM
-    - DNS
-    - HTTP
-    - SSL
+    # - GitHub
+    # - App Store
+    # - AppStore = App Store
+    # - Git
+    # - Node.js
+    # - nodejs = Node.js
+    # - VIM
+    # - DNS
+    # - HTTP
+    # - SSL
