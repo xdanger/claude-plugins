@@ -1,43 +1,62 @@
-生成并提交符合 Gitmoji 和 Conventional Commits 规范的 commit message。
+---
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(gh:issue view)
+description: Create a git commit with Gitmoji and Conventional Commits
+---
 
-执行步骤：
+## Context
 
-1. 运行 git diff --cached 查看所有已 staged 的变更（忽视 unstaged 文件）
-2. 如果 $ARGUMENTS 不为空，运行 gh issue view $ARGUMENTS 获取 issue 详情
-3. 分析变更内容，确定：
-   - type: feat/fix/docs/style/refactor/perf/test/build/ci/chore/revert
-   - scope: 从 issue 或分支名提取作用域（可选）
-   - gitmoji: 选择最符合变更性质的一个 emoji
-   - breaking: 是否有破坏性变更
-4. 生成 commit message，格式如下：
+- Current git status: !`git status`
+- Current git diff (staged and unstaged changes): !`git diff HEAD`
+- Current branch: !`git branch --show-current`
+- Recent commits: !`git log --oneline -10`
 
-第一行（subject）：
+## Your task
+
+Based on the above changes, create a single git commit following Gitmoji and Conventional Commits specification.
+
+### Execution Steps
+
+1. Run `git diff --cached` to review all staged changes (ignore unstaged files)
+2. If `$ARGUMENTS` is provided, run `gh issue view $ARGUMENTS` to get issue details
+3. Analyze changes and determine:
+   - **type**: feat/fix/docs/style/refactor/perf/test/build/ci/chore/revert
+   - **scope**: Extract from issue or branch name (optional)
+   - **gitmoji**: Choose emoji matching the change nature
+   - **breaking**: Whether there's a breaking change
+4. Generate commit message in this format:
+
+**First line (subject):**
+```
 <emoji> <type>(<scope>)<exclamation-if-breaking>: <description> (#<issue_id>)
+```
 
-示例：✨ feat(auth)! support user login (#1234)
+Example: `✨ feat(auth)! support user login (#1234)`
 
-要点：
+**Key points:**
+- description in English, imperative mood (add/fix/update), max 50 characters
+- Add exclamation mark after type if breaking change
 
-- description 使用英文，祈使语气（add/fix/update），不超过 50 字符
-- 有破坏性变更时在 type 后加感叹号
-
-Body（空一行后）：
-
+**Body (after blank line):**
+```
 - <emoji> change description 1
 - <emoji> change description 2
 - <emoji> change description 3
+```
 
-如有破坏性变更，末尾添加：
-
+**For breaking changes, append:**
+```
 💥 BREAKING CHANGE:
-
 - breaking change description
+```
 
-5. 提交后运行 git status 确认结果
+5. After committing, run `git status` to confirm
 
-注意事项：
+### Guidelines
 
-- 只输出 commit message，不附加解释
-- 确保 message 准确反映变更的 why 和 what
-- 使用主动语态，避免冗余短语
-- 如无 staged 文件，输出警告信息
+- Output only the commit message, no explanations
+- Message must accurately reflect "why" and "what" of changes
+- Use active voice, avoid redundant phrases
+- If no staged files, output warning message
+- Stage additional changes if needed using `git add`
+
+You have the capability to call multiple tools in a single response. Stage and create the commit using a single message. Do not use any other tools or do anything else besides git operations needed for the commit.
